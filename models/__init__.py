@@ -1,1 +1,1 @@
-from estate_property import  TestModel
+from . import estate_property
