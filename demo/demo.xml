@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+          <record id="object0" model="estate.property.type">
+            <field name="name">house</field>
+          </record>
+          <record id="object1" model="estate.property.type">
+            <field name="name">apartment</field>
+          </record>
+        <record id="object2" model="estate.property.type">
+            <field name="name">penthouse</field>
+          </record>
+        <record id="object3" model="estate.property.type">
+            <field name="name">castle</field>
+          </record>
+        <record id="object4" model="estate.property.type">
+            <field name="name">villa</field>
+          </record>
+
+    </data>
+</odoo>

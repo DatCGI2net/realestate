@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<odoo>
+
+
+        <record id="estate_property_type_view_tree" model="ir.ui.view">
+            <field name="name">estate.property.type.tree</field>
+            <field name="model">estate.property.type</field>
+            <field name="arch" type="xml">
+                <tree string="Estate Property Type" >
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                </tree>
+        </field>
+    </record>
+
+         <record id="estate_property_type_view_form" model="ir.ui.view">
+            <field name="name">estate.property.type.form</field>
+            <field name="model">estate.property.type</field>
+            <field name="arch" type="xml">
+                <form string="Amazing property Type">
+                    <sheet>
+
+                        <div class="oe_button_box" name="button_box">
+                        <button name="action_offer_count" type="object"
+                            class="oe_stat_button" icon="fa-star">
+                            <div class="o_stat_info">
+                                <field name="offer_count" class="o_stat_value"/>
+                                <span class="o_stat_text"> Counted</span>
+                            </div>
+                        </button>
+                    </div>
+
+                       <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="name" string="Title"/>
+                            </div>
+                            <h1 class="mb32">
+                                <field name="name" class="mb16"/>
+                            </h1>
+
+                        </div>
+                        <field name="property_ids" >
+                            <tree delete="false">
+                                <field name="name"/>
+                                <field name="expected_price"/>
+                                <field name="state" widget="statusbar"/>
+                            </tree>
+                        </field>
+
+                    </sheet>
+
+                </form>
+        </field>
+    </record>
+
+
+         <record id="estate_property_type_model_action" model="ir.actions.act_window">
+            <field name="name">Estate Property Type</field>
+            <field name="res_model">estate.property.type</field>
+            <field name="view_mode">tree,form</field>
+             <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Define a new property
+          </p><p>
+            Use estate property to delight your customer.
+          </p><p>
+            Some examples of estate property: "Peaceful place", "Return to nature"
+          </p>
+        </field>
+        </record>
+
+</odoo>
